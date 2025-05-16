@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="en">
+    <head>
+        <title>Come Celebrate Rebecca's 17th Birthday!</title>
+        <link rel="icon" type="image/x-icon" href="webIcon.ico">
+        <link href="https://fonts.googleapis.com/css2?family=Zain&family=Pacifico&family=Righteous" rel="stylesheet">
+    </head>
+
+    <style>
+        #loader{
+            display:flex; position: fixed; top:0; bottom: 0; left: 0; right: 0;
+            background:linear-gradient(45deg,midnightblue,navy,midnightblue);
+            transition: 0.5s; opacity:1; z-index: 999; align-items: flex-start; justify-content: center;
+        }
+            #loader.hidden{ opacity:0;}
+            #loader img{display:block; width:300px; height:auto; margin:auto; object-fit: cover;}
+
+        #openAnimation{
+            display:flex; position:absolute; top:0; right:0; width:100%; height:100%;
+            margin:0; align-items: center; justify-content: center; text-align:center;
+            flex-flow:column;
+            transition:0.5s; opacity:1;
+            background:linear-gradient(45deg,rgb(23, 0, 53),rgb(9, 0, 62));
+        }
+
+        #pageContent {
+            display: none; position: relative;
+            margin:0; padding:15px; margin-top:100vh;
+            text-align: center;
+        }
+
+         #pageContent > img {display: block; width:90%; max-width:600px; height:auto; border-radius: 15px; margin:30px auto 30px auto;}
+
+        h1 {font-family: pacifico; color:gold; }
+        h2 {font-family: Righteous; color:cyan;}
+        h3 {font-family: Righteous; color:hotpink;}
+        body {font-size: 28px; font-family: Zain;}
+        a {color:inherit;}
+            a.btn {transition:0.5s; padding:10px; margin:10px; border:2px solid white; border-radius: 15px; text-decoration: none;}
+                a.btn:hover {scale:1.05; background-color: white; color:midnightblue;}
+
+        @keyframes slideIn {
+            0% {opacity:0; margin-top:-20px; scale:0.001;}
+            100% {opacity:1; margin-top:0; scale:1;}
+        }
+
+    </style>
+
+    <body style='background-color:rgb(12, 12, 60); color:white;' onload="document.getElementById('loader').classList.add('hidden'); setTimeout(function(){document.getElementById('loader').style.display='none';},510); startAnim();">
+        <div id="loader"><img src='loadingSymb.webp'></div>
+        <div id="openAnimation">
+            <h1 class="bigText" id="bt1" style="margin-top:0; display:none; transition:0.5s; font-size:70px; animation: slideIn 0.5s;">You can dance</h1>
+            <h1 class="bigText" id="bt2" style="margin-top:0; display:none; font-size:70px; color:hotpink; animation: slideIn 0.5s;">You can jive</h1>
+            <h1 class="bigText" id="bt3" style="margin-top:0; display:none; font-size:70px; color:cyan; animation: slideIn 0.8s;">At Rebecca's 17th Birthday Party!</h1>
+            <img src="scrollDown.gif" id='img1' style="width:100px; height:auto; display: none; animation: slideIn 0.8s;">
+        </div> 
+        <div id="pageContent">
+            <img src="abbaBanner.jpg" style="width:100%; max-width: 1000px;">
+
+            <h1>Join Us for a Dancing Queen Birthday Bash</h1>
+            as we celebrate <b>Rebecca Reyman</b> turning <b>Seventeen</b>!
+            <p>There will be <b>Drinks</b>! There will be <b>Dancing!</b> And of course, there will be <b>FUN</b>!</p>
+            <br><br>
+            <h2>Date & Location</h2>
+            Rebecca's party will be on <b><a href="https://calendar.app.google/7Sx9gejBgrZJYu1W9">Sunday, May 25th at 6:00 PM</a></b>
+            <h3>15751 Addison St. Encino, CA 91436</h3>
+            <br><br>
+            <a class="btn" href="https://forms.gle/AUZEvMv1WFhovRjLA">Please RSVP Here</a>
+            <br><br>
+            <img src="webIcon.ico">
+            <p>We can't wait to see you there!</p>
+            <a class="btn" href="https://calendar.app.google/7Sx9gejBgrZJYu1W9">Add to Calendar</a>
+        </div>
+    </body>
+
+    <script>
+        function startAnim(){
+            setTimeout(function(){document.getElementById('bt1').style.display = 'block';},1000);
+            setTimeout(function(){document.getElementById('bt2').style.display = 'block';},2500);
+            setTimeout(function(){document.getElementById('bt1').style.display = 'none';},4500);
+            setTimeout(function(){document.getElementById('bt2').style.display = 'none';},4500);
+            setTimeout(function(){document.getElementById('bt3').style.display = 'block';},4500);
+            setTimeout(function(){document.getElementById('img1').style.display = 'block';},6700);
+            setTimeout(function(){document.getElementById('pageContent').style.display = 'block';},6700);
+        }
+    </script>
+</html>
